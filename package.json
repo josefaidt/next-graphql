@@ -1,0 +1,60 @@
+{
+  "name": "next-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "next start",
+    "dev": "next",
+    "build": "next build"
+  },
+  "dependencies": {
+    "@fec/remark-a11y-emoji": "^1.0.0",
+    "@mdx-js/mdx": "^1.6.16",
+    "@mdx-js/react": "^1.6.16",
+    "@mdx-js/runtime": "^1.6.16",
+    "@silvenon/remark-smartypants": "^1.0.0",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
+    "gray-matter": "^4.0.2",
+    "is-url": "^1.2.4",
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reading-time": "^1.2.0",
+    "remark": "^12.0.1",
+    "remark-autolink-headings": "^6.0.1",
+    "remark-frontmatter": "^2.0.0",
+    "remark-html": "^12.0.0",
+    "remark-images": "^2.0.0",
+    "remark-mdx": "^1.6.16",
+    "to-vfile": "^6.1.0",
+    "unist-util-remove": "^2.0.0",
+    "unist-util-visit": "^2.0.3",
+    "yaml": "^1.10.0"
+  },
+  "eslintConfig": {
+    "extends": "@josefaidt/eslint-config"
+  },
+  "prettier": "@josefaidt/prettier-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.{md,mdx,json,html,css}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@josefaidt/eslint-config": "^0.1.14",
+    "@josefaidt/prettier-config": "^0.0.2",
+    "eslint": "^7.7.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
+  }
+}
